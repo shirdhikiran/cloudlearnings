@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/cloudlearnings
+    username: springuser
+    password: ThePassword
+    jpa:
+      hibernate:
+        ddl-auto: update
+server:
+  port: 8081
+
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka/
+  instance:
+    hostname: localhost
